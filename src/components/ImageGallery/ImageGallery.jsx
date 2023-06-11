@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
-import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem';
-import {ImageGallery} from './ImageGallery.styled'
+import { ImgGalleryItem } from '../ImageGalleryItem/ImageGalleryItem';
+import { Gallery } from './ImageGallery.styled';
 
 export const ImageGallery = ({ images, openModal }) => {
   return (
-    <ImageGallery onClick={e => openModal(e)}>
+    <Gallery onClick={e => openModal(e)}>
       {images.map(image => (
-        <ImageGalleryItem
+        <ImgGalleryItem
           key={image.id}
           image={image.webformatURL}
           largeImageURL={image.largeImageURL}
         />
       ))}
-    </ImageGallery>
+    </Gallery>
   );
 };
 
